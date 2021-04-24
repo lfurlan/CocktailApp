@@ -13,6 +13,8 @@
 		1876A5F12630A1730047C691 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1876A5EF2630A1730047C691 /* Main.storyboard */; };
 		1876A5F32630A1790047C691 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1876A5F22630A1790047C691 /* Assets.xcassets */; };
 		1876A5F62630A1790047C691 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1876A5F42630A1790047C691 /* LaunchScreen.storyboard */; };
+		187857B02631867E00800FB8 /* NetworkBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187857AF2631867E00800FB8 /* NetworkBase.swift */; };
+		187857B22631877300800FB8 /* NetworkApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187857B12631877300800FB8 /* NetworkApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		1876A5F22630A1790047C691 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1876A5F52630A1790047C691 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1876A5F72630A1790047C691 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		187857AF2631867E00800FB8 /* NetworkBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkBase.swift; sourceTree = "<group>"; };
+		187857B12631877300800FB8 /* NetworkApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18522BE92630A90A00C463DB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				187857AF2631867E00800FB8 /* NetworkBase.swift */,
+				187857B12631877300800FB8 /* NetworkApi.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		18522BEA2630A92F00C463DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18522BEB2630A95A00C463DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1876A5F42630A1790047C691 /* LaunchScreen.storyboard */,
+				1876A5EF2630A1730047C691 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18522BEC2630A9A200C463DB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1876A5ED2630A1730047C691 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		1876A5DD2630A1730047C691 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +93,56 @@
 		1876A5E82630A1730047C691 /* CocktailApp */ = {
 			isa = PBXGroup;
 			children = (
+				18522BE92630A90A00C463DB /* Networking */,
+				18522BEA2630A92F00C463DB /* Model */,
+				18522BEB2630A95A00C463DB /* View */,
+				18BBA29B26343868000994DB /* ViewModel */,
+				18522BEC2630A9A200C463DB /* Controller */,
+				18BBA29C263438E5000994DB /* Utils */,
 				1876A5E92630A1730047C691 /* AppDelegate.swift */,
 				1876A5EB2630A1730047C691 /* SceneDelegate.swift */,
-				1876A5ED2630A1730047C691 /* ViewController.swift */,
-				1876A5EF2630A1730047C691 /* Main.storyboard */,
 				1876A5F22630A1790047C691 /* Assets.xcassets */,
-				1876A5F42630A1790047C691 /* LaunchScreen.storyboard */,
 				1876A5F72630A1790047C691 /* Info.plist */,
 			);
 			path = CocktailApp;
+			sourceTree = "<group>";
+		};
+		18BBA29B26343868000994DB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		18BBA29C263438E5000994DB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				18BBA29F2634391F000994DB /* Colors */,
+				18BBA29E26343916000994DB /* Fonts */,
+				18BBA29D26343900000994DB /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		18BBA29D26343900000994DB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		18BBA29E26343916000994DB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		18BBA29F2634391F000994DB /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +216,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187857B22631877300800FB8 /* NetworkApi.swift in Sources */,
 				1876A5EE2630A1730047C691 /* ViewController.swift in Sources */,
+				187857B02631867E00800FB8 /* NetworkBase.swift in Sources */,
 				1876A5EA2630A1730047C691 /* AppDelegate.swift in Sources */,
 				1876A5EC2630A1730047C691 /* SceneDelegate.swift in Sources */,
 			);
